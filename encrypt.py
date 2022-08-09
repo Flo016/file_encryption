@@ -43,7 +43,7 @@ kdf = Scrypt(
 
 kdf.verify(key2.encode(), key) #verifies password
 # encrypt 
-nonce = urandom(12)
+nonce = urandom(32)
 with open("nonce.txt", 'wb') as file:
     file.write(nonce)
 
